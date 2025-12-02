@@ -4,7 +4,7 @@ import { useRoomStores } from "@/stores/roomStore";
 const roomStore = useRoomStores();
 </script>
 <template>
-  <section class="py-16 bg-[#f3f3f3] relative">
+  <div class="py-16 bg-[#f3f3f3] relative">
     <div class="container mx-auto px-4 text-center">
       <!-- Заголовок + описание + мини-табы -->
       <h2 class="text-4xl font-bold text-blue-950 mb-4">Галерея отеля</h2>
@@ -14,11 +14,29 @@ const roomStore = useRoomStores();
       </p>
 
       <!-- Фото (6 штук) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+      <div class="grid w-[90%] m-auto grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
         <div v-for="gallery in roomStore.previewGallery" :key="gallery.id"
-          class="group overflow-hidden rounded-xl shadow-lg">
-          <img :src="gallery.image" :alt="gallery.title" loading="lazy"
-            class="w-full h-64 sm:h-72 md:h-80 object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" />
+          class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
+          <!-- Фото с масштабом -->
+          <img :src="gallery.image" :alt="gallery.title" loading="lazy" class="w-full h-64 sm:h-72 md:h-70 object-cover 
+             transition-transform duration-300 
+             group-hover:scale-105" />
+
+          <!-- Overlay: сероватый фон + текст -->
+          <div class="absolute inset-0 bg-gray-900/0 
+                group-hover:bg-gray-900/40 
+                transition-colors duration-300 
+                flex flex-col justify-end p-4 
+                text-white">
+
+            <!-- Текст появляется только при hover -->
+            <div class="translate-y-4 opacity-0 
+                  group-hover:translate-y-0 group-hover:opacity-100 
+                  transition-all duration-300">
+              <p class="font-semibold text-lg">{{ gallery.title }}</p>
+              <p class="text-sm opacity-90">Узнать больше →</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -34,5 +52,5 @@ const roomStore = useRoomStores();
         </router-link>
       </div>
     </div>
-  </section>
+  </div>
 </template>
