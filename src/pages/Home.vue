@@ -6,7 +6,7 @@ import hotel from "../assets/hotel-bg.jpg";
 import About from "@/components/Home/About.vue";
 import Rooms from "@/components/Home/Rooms.vue";
 import Gallery from "@/components/Home/PreviewGallery.vue";
-import Review from "@/components/Home/Review.vue";
+import Review from "@/components/Home/ClientReviews.vue";
 
 const isLoading = ref(true);
 
