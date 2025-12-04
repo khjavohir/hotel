@@ -7,6 +7,7 @@ import About from "@/components/Home/About.vue";
 import Rooms from "@/components/Home/Rooms.vue";
 import Gallery from "@/components/Home/PreviewGallery.vue";
 import Review from "@/components/Home/ClientReviews.vue";
+import Footer from "@/components/Home/Footer.vue";
 
 const isLoading = ref(true);
 
@@ -28,6 +29,7 @@ onMounted(() => {
   <Rooms />
   <Gallery />
   <Review />
+  <Footer />
 </template>
 
 <style scoped>
