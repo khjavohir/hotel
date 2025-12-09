@@ -6,6 +6,8 @@ defineProps({
   title: String,
   desc: String,
   img: String,
+  bottomArrow: { type: Boolean, default: false },
+  bookBtn: { type: Boolean, default: true },
 });
 
 const isOpen = ref(false);
@@ -38,7 +40,7 @@ function closeMenu() {
           <nav class="hidden md:flex items-center gap-8">
             <router-link to="/" class="text-sm text-white/90 hover:text-white">ГЛАВНАЯ</router-link>
             <router-link to="/rooms" class="text-sm text-white/90 hover:text-white">КОМНАТЫ</router-link>
-            <router-link to="/reviews" class="text-sm text-white/90 hover:text-white">ОТЗЫВЫ</router-link>
+            <router-link to="/reviews" class="text-sm text-white/90 hover:text-white">УСЛУГИ</router-link>
             <router-link to="/about" class="text-sm text-white/90 hover:text-white">О НАС</router-link>
             <router-link to="/contact" class="text-sm text-white/90 hover:text-white">КОНТАКТЫ</router-link>
           </nav>
@@ -94,7 +96,14 @@ function closeMenu() {
         <p class="text-sm sm:text-xl md:text-2xl font-light max-w-3xl">
           {{ desc }}
         </p>
-        <router-link to="/rooms"
+        <div v-if="bottomArrow" class="animate-bounce mt-12 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 md:h-20 md:w-20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+
+        <router-link v-if="bookBtn" to="/rooms"
           class="mt-8 sm:mt-10 px-8 py-3 sm:px-10 sm:py-4 text-white text-sm sm:text-base font-semibold uppercase tracking-widest border border-white transform transition-transform duration-300 ease-out hover:scale-105 hover:shadow-lg active:scale-95">
           ЗАБРОНИРОВАТЬ
         </router-link>

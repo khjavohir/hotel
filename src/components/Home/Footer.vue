@@ -1,7 +1,3 @@
-<script setup>
-// Никаких импортов — всё внутри
-</script>
-
 <template>
     <footer class="bg-[#0a1a2f] text-white py-16 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
