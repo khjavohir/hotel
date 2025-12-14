@@ -28,14 +28,17 @@ const roomStore = useRoomStores();
                 transition-colors duration-300 
                 flex flex-col justify-end p-4 
                 text-white">
+            <router-link to="/rooms">
 
-            <!-- Текст появляется только при hover -->
-            <div class="translate-y-4 opacity-0 
+              <!-- Текст появляется только при hover -->
+              <div class="translate-y-4 opacity-0 
                   group-hover:translate-y-0 group-hover:opacity-100 
                   transition-all duration-300">
-              <p class="font-semibold text-lg">{{ gallery.title }}</p>
-              <p class="text-sm opacity-90">Узнать больше →</p>
-            </div>
+
+                <p class="font-semibold text-lg">{{ gallery.title }}</p>
+                <p class="text-sm opacity-90">Узнать больше →</p>
+              </div>
+            </router-link>
           </div>
         </div>
       </div>

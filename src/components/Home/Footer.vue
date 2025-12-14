@@ -1,8 +1,8 @@
 <template>
     <footer class="bg-[#0a1a2f] text-white py-16 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="w-[90%] m-auto">
             <!-- Основная сетка -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                 <!-- Колонка 1: Логотип + описание -->
                 <div class="space-y-4">
                     <h3
@@ -17,7 +17,8 @@
 
                 <!-- Колонка 2: Навигация -->
                 <div>
-                    <h4 class="text-sm font-semibold uppercase tracking-widest bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-4">
+                    <h4
+                        class="text-sm font-semibold uppercase tracking-widest bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-4">
                         Навигация
                     </h4>
                     <ul class="space-y-3 text-gray-400">
@@ -38,7 +39,8 @@
 
                 <!-- Колонка 3: Услуги -->
                 <div>
-                    <h4 class="text-sm font-semibold uppercase tracking-widest bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-4">
+                    <h4
+                        class="text-sm font-semibold uppercase tracking-widest bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-4">
                         Услуги
                     </h4>
                     <ul class="space-y-3 text-gray-400">
@@ -59,7 +61,8 @@
 
                 <!-- Колонка 4: Приложения -->
                 <div>
-                    <h4 class="text-sm font-semibold uppercase tracking-widest bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-4">
+                    <h4
+                        class="text-sm font-semibold uppercase tracking-widest bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-4">
                         Мобильное приложение
                     </h4>
                     <p class="text-sm text-gray-400 mb-4">
@@ -89,7 +92,7 @@
             <!-- Нижняя строка -->
             <div
                 class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                <p>© 2025 HotelFuture. Все права защищены.</p>
+                <p>© 2013 Town Tower. Все права защищены.</p>
                 <div class="flex gap-6">
                     <a href="#" class="hover:text-white transition-colors">Политика конфиденциальности</a>
                     <a href="#" class="hover:text-white transition-colors">Условия использования</a>
