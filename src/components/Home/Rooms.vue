@@ -37,10 +37,10 @@ const roomStores = useRoomStores();
                 {{ room.price }}
               </span>
 
-              <button
+              <router-link to="/rooms"
                 class="bg-[#0a1a2f] text-white px-4 py-2 rounded-lg hover:bg-[#122b4a] transition-all cursor-pointer">
                 Подробнее
-              </button>
+              </router-link>
             </div>
           </div>
         </div>

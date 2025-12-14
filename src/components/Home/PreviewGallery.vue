@@ -18,27 +18,19 @@ const roomStore = useRoomStores();
         <div v-for="gallery in roomStore.previewGallery" :key="gallery.id"
           class="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer">
           <!-- Фото с масштабом -->
-          <img :src="gallery.image" :alt="gallery.title" loading="lazy" class="w-full h-64 sm:h-72 md:h-70 object-cover 
-             transition-transform duration-300 
-             group-hover:scale-105" />
+          <img :src="gallery.image" :alt="gallery.title" loading="lazy"
+            class="w-full h-64 sm:h-72 md:h-70 object-cover transition-transform duration-300 group-hover:scale-105" />
 
-          <!-- Overlay: сероватый фон + текст --><router-link to="/rooms">
-            <div class="absolute inset-0 bg-gray-900/0 
-                group-hover:bg-gray-900/40 
-                transition-colors duration-300 
-                flex flex-col justify-end p-4 
-                text-white">
-
-
+          <!-- Overlay: сероватый фон + текст -->
+          <router-link to="/rooms">
+            <div
+              class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/40 transition-colors duration-300 flex flex-col justify-end p-4 text-white">
               <!-- Текст появляется только при hover -->
-              <div class="translate-y-4 opacity-0 
-                  group-hover:translate-y-0 group-hover:opacity-100 
-                  transition-all duration-300">
-
+              <div
+                class="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                 <p class="font-semibold text-lg">{{ gallery.title }}</p>
                 <p class="text-sm opacity-90">Узнать больше →</p>
               </div>
-
             </div>
           </router-link>
         </div>
@@ -47,7 +39,7 @@ const roomStore = useRoomStores();
       <!-- Кнопка + социальные иконки -->
       <div class="flex flex-col md:flex-row justify-center items-center gap-4">
         <router-link to="/gallery"
-          class="group inline-flex items-center gap-2 px-8 py-3 bg-blue-950 text-white font-medium rounded-full  transition">
+          class="group inline-flex items-center gap-2 px-8 py-3 bg-blue-950 text-white font-medium rounded-full transition">
           Посмотреть все фото
           <svg class="w-5 h-5 group-hover:translate-x-1 transition" fill="none" stroke="currentColor"
             viewBox="0 0 24 24">
