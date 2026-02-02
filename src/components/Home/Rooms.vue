@@ -37,7 +37,7 @@ const roomStores = useRoomStores();
                 {{ room.price }}
               </span>
 
-              <router-link to="/rooms"
+              <router-link :to="`/rooms/${room.id}`"
                 class="bg-[#0a1a2f] text-white px-4 py-2 rounded-lg hover:bg-[#122b4a] transition-all cursor-pointer">
                 Подробнее
               </router-link>

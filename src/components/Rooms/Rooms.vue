@@ -2,14 +2,15 @@
 import { useRoomStores } from "@/stores/roomStore";
 
 const store = useRoomStores();
-
 </script>
 
 <template>
     <div class="my-25 w-[90%] m-auto">
         <!-- СЕКЦИЯ ПОИСКА И ФИЛЬТРОВ -->
         <div class="bg-white rounded-2xl shadow-md p-8 pb-10 mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">Найдите идеальный номер</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">
+                Найдите идеальный номер
+            </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
                 <!-- Поиск по названию -->
@@ -57,13 +58,12 @@ const store = useRoomStores();
 
                 <!-- Кнопка поиска -->
                 <div class="flex items-end">
-                    <button @click='store.resetFilters()'
+                    <button @click="store.resetFilters()"
                         class="w-full bg-[#0a1a2f] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#122b4a] transition-all duration-300 cursor-pointer">
                         Сбросить
                     </button>
                 </div>
             </div>
-
         </div>
 
         <!-- КАРТОЧКИ НОМЕРОВ -->
@@ -81,13 +81,13 @@ const store = useRoomStores();
 
                     <div class="flex justify-between items-center mt-auto">
                         <span class="font-medium text-sm sm:text-base text-[#0a1a2f]">
-                            {{ room.price }}
+                            {{ room.price }} / ночь
                         </span>
 
-                        <button
+                        <router-link :to="`/rooms/${room.id}`"
                             class="bg-[#0a1a2f] text-white px-4 py-2 rounded-lg hover:bg-[#122b4a] transition-all cursor-pointer">
                             Подробнее
-                        </button>
+                        </router-link>
                     </div>
                 </div>
             </div>
